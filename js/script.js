@@ -26,4 +26,17 @@ esquerda.addEventListener('click', () => {
   lista.scrollBy({ left: -220, behavior: 'smooth' });
 });
 
+// Animação suave quando rolar a página
+const elementos = document.querySelectorAll('.fade-in');
+window.addEventListener('scroll', () => {
+  elementos.forEach(el => {
+    const posicao = el.getBoundingClientRect().top;
+    if (posicao < window.innerHeight - 100) {
+      el.classList.add('visivel');
+    }
+  });
+});
+
+
+
 
