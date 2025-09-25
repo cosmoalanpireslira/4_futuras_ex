@@ -3,77 +3,231 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Minhas 4 Futuras Ex-Namoradas</title>
-  <link rel="stylesheet" href="css/style.css">
+  <title>Minhas 4 Futuras Ex-namoradas</title>
+  <style>
+    body {
+      background-color: #141414;
+      color: #ffffff;
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+    }
+    header {
+      background: #000;
+      padding: 2rem;
+      text-align: center;
+    }
+    header h1 {
+      color: #e50914;
+      font-size: 2.8rem;
+      margin: 0;
+      font-weight: 900;
+    }
+    header p {
+      color: #b3b3b3;
+      margin-top: 0.5rem;
+    }
+    nav {
+      background: #000;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      padding: 1rem;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #e50914;
+    }
+    section {
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    section h2 {
+      color: #e50914;
+      margin-bottom: 1rem;
+      font-size: 1.8rem;
+    }
+    .banner {
+      text-align: center;
+      margin: 2rem 0;
+    }
+    .banner img {
+      max-width: 250px;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.7);
+    }
+    .button, .btn-play {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.8rem 1.5rem;
+      background: #e50914;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: bold;
+      transition: background 0.3s, transform 0.2s;
+    }
+    .button:hover, .btn-play:hover {
+      background: #f40612;
+      transform: scale(1.05);
+    }
+    .carrossel {
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      position: relative;
+    }
+    .lista {
+      display: flex;
+      gap: 1rem;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+    }
+    .card {
+      min-width: 200px;
+      height: 120px;
+      background: #333;
+      border-radius: 8px;
+      color: white;
+      font-size: 1.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.3s;
+    }
+    .card:hover {
+      transform: scale(1.1);
+      background: #e50914;
+      cursor: pointer;
+    }
+    .seta {
+      background: rgba(0,0,0,0.5);
+      border: none;
+      color: white;
+      font-size: 1.5rem;
+      cursor: pointer;
+      padding: 0.5rem;
+      position: absolute;
+      z-index: 1;
+    }
+    .seta.esquerda { left: 0; }
+    .seta.direita { right: 0; }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+    .fade-in.visivel {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    footer {
+      background: #000;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #b3b3b3;
+    }
+  </style>
 </head>
-
-   <div class="carrossel">
-  <button class="seta esquerda">◀</button>
-  <div class="lista">
-    <div class="card">💘 Ex 1</div>
-    <div class="card">🌸 Ex 2</div>
-    <div class="card">😂 Ex 3</div>
-    <div class="card">🎶 Ex 4</div>
-  </div>
-  <button class="seta direita">▶</button>
-</div>
-  
 <body>
-  <header>
-    <h1>📖 Minhas 4 Futuras Ex-Namoradas</h1>
-    <nav>
-      <a href="index.html">Início</a>
-      <a href="lancamento.html">Lançamento</a>
-      <a href="diego.html">Diego</a>
-      <a href="alessia.html">Aléssia</a>
-      <a href="rosa.html">Rosa</a>
-      <a href="hanna.html">Hanna</a>
-      <a href="autor.html">Autor</a>
-      <a href="curiosidades.html">Curiosidades</a>
-      <a href="adquira.html">Adquira</a>
-      <a href="misteriosa.html">Misteriosa</a>
-      <a href="ilustradora.html">Ilustradora</a>
-    </nav>
+  <header class="fade-in">
+    <h1>Minhas 4 Futuras Ex-namoradas</h1>
+    <p>Uma comédia romântica no coração do Cariri 🌵💕</p>
+    <a href="#extras" class="btn-play">▶ Assistir ao Trailer</a>
   </header>
 
-  <main>
-    <section class="hero">
-      <h2>Conheça a comédia romântica de fantasia que se passa no Cariri</h2>
-      <p>Minhas 4 Futuras Ex-namoradas é um livro de comédia romântica que mistura fantasia, cultura nerd e muita vergonha alheia. A história começa quando Diego Gubarão, um adolescente tímido, se apaixona à primeira vista por Aléssia, segundos antes de ela ser atropelada brutalmente. De maneira inesperada, ela reaparece no dia seguinte chamando Diego para tomar açaí, como se nada tivesse acontecido. O livro é tipo um filme adolescente da Netflix, só que se passando no Ceará.</p>
-      <img src="img/capa-livro.jpg" alt="Capa do livro" class="hero-img">
-    </section>
+  <nav>
+    <a href="#sobre">Sobre o Livro</a>
+    <a href="#autor">Autor</a>
+    <a href="#lancamento">Lançamento</a>
+    <a href="#loja">Comprar</a>
+    <a href="#extras">Extras</a>
+    <a href="#contato">Contato</a>
+  </nav>
 
-    <section class="personagens">
-      <h2>Guia dos Personagens</h2>
-      <div class="cards">
-        <div class="card">
-          <img src="img/diego.jpg" alt="Diego Gubarão">
-          <h3>Diego Gubarão</h3>
-        </div>
-        <div class="card">
-          <img src="img/alessia.jpg" alt="Aléssia">
-          <h3>Aléssia</h3>
-        </div>
-        <div class="card">
-          <img src="img/rosa.jpg" alt="Rosa Rebolças">
-          <h3>Rosa Rebolças</h3>
-        </div>
-        <div class="card">
-          <img src="img/hanna.jpg" alt="Hanna Farias">
-          <h3>Hanna Farias</h3>
-        </div>
+  <section id="sobre" class="fade-in">
+    <h2>Sobre o Livro</h2>
+    <p>Um adolescente tímido chamado Diego Gubarão se apaixona à primeira vista segundos antes de sua paixão ser atropelada... mas no dia seguinte ela aparece viva e o chama para tomar açaí. 🌸 É tipo um filme adolescente da Netflix, só que no Ceará!</p>
+    <div class="banner">
+      <img src="capa-livro.jpg" alt="Capa do Livro">
+    </div>
+  </section>
+
+  <section id="autor" class="fade-in">
+    <h2>Sobre o Autor</h2>
+    <p>Thiago Mariano é professor, escritor e criador do canal de comédia <em>E Se Fosse no Brasil?</em>. Já publicou outros títulos digitais e traz muito humor e cultura caririense em suas histórias.</p>
+  </section>
+
+  <section id="lancamento" class="fade-in">
+    <h2>Lançamento</h2>
+    <p>📅 <strong>29 de outubro</strong><br>
+       📍 Biblioteca Pública Municipal de Juazeiro do Norte<br>
+       🕒 15h</p>
+    <p>Evento gratuito com palestra, sorteio de livros e sessão de autógrafos!</p>
+  </section>
+
+  <section id="loja" class="fade-in">
+    <h2>Como Comprar</h2>
+    <p>Adquira já sua edição física por <strong>R$ 39,99</strong> diretamente pelas redes sociais do autor.</p>
+    <a class="button" href="https://instagram.com/fthiagomariano" target="_blank">Comprar Agora</a>
+  </section>
+
+  <section id="extras" class="fade-in">
+    <h2>Extras Divertidos</h2>
+    <div class="carrossel">
+      <button class="seta esquerda">◀</button>
+      <div class="lista">
+        <div class="card">🦟 Filé de Muriçoca</div>
+        <div class="card">🎶 Playlist do Cariri</div>
+        <div class="card">😂 Memes do Livro</div>
+        <div class="card">🌸 Ilustrações Fofas</div>
       </div>
-    </section>
-  </main>
+      <button class="seta direita">▶</button>
+    </div>
+  </section>
 
- <a href="#extras" class="btn-play">▶ Assistir ao Trailer</a>
-
-
+  <section id="contato" class="fade-in">
+    <h2>Contato</h2>
+    <p>Email: fthiagomariano@yahoo.com.br<br>
+       Instagram: @fthiagomariano<br>
+       WhatsApp: (88) 98803-9968</p>
+  </section>
 
   <footer>
-    <p>© 2025 Thiago Mariano | E-mail: fthiagomariano@yahoo.com.br | Instagram: @fthiagomariano</p>
+    <p>&copy; 2025 Thiago Mariano - Minhas 4 Futuras Ex-namoradas</p>
   </footer>
+
+  <script>
+    // Carrossel
+    const lista = document.querySelector('.lista');
+    const esquerda = document.querySelector('.seta.esquerda');
+    const direita = document.querySelector('.seta.direita');
+
+    direita.addEventListener('click', () => {
+      lista.scrollBy({ left: 220, behavior: 'smooth' });
+    });
+
+    esquerda.addEventListener('click', () => {
+      lista.scrollBy({ left: -220, behavior: 'smooth' });
+    });
+
+    // Fade-in na rolagem
+    const elementos = document.querySelectorAll('.fade-in');
+    window.addEventListener('scroll', () => {
+      elementos.forEach(el => {
+        const posicao = el.getBoundingClientRect().top;
+        if (posicao < window.innerHeight - 100) {
+          el.classList.add('visivel');
+        }
+      });
+    });
+  </script>
 </body>
 </html>
-
-
