@@ -125,4 +125,23 @@ section h2 {
 .seta.esquerda { left: 0; }
 .seta.direita { right: 0; }
 
+.btn-play {
+  background: #e50914;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 4px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: transform 0.2s, background 0.3s;
+}
+.btn-play:hover {
+  transform: scale(1.05);
+  background: #f40612;
+}
+
+
 
