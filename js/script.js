@@ -10,3 +10,20 @@ const revealOnScroll = () => {
 };
 window.addEventListener('scroll', revealOnScroll);
 revealOnScroll();
+
+
+
+// JS para mover o carrossel
+const lista = document.querySelector('.lista');
+const esquerda = document.querySelector('.seta.esquerda');
+const direita = document.querySelector('.seta.direita');
+
+direita.addEventListener('click', () => {
+  lista.scrollBy({ left: 220, behavior: 'smooth' });
+});
+
+esquerda.addEventListener('click', () => {
+  lista.scrollBy({ left: -220, behavior: 'smooth' });
+});
+
+
